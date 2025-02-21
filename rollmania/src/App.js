@@ -1,16 +1,25 @@
 import './App.css';
-import Die from './Die.js';
+import Dice from'./Dice.js';
 import Title from './Title.js';
+import RollButton from './RollButton.js';
+
+import {useState} from 'react';
 
 function App() {
+	
+	let [roll, setRoll] = useState(false);
+
+	function roll_dice() {
+		setRoll(true);
+	}
+
   return (
-		<div>
-				<Title />
-			<main className="App">
-				<Die />
-				<Die />
-				<Die />
-			</main>
+		<div className="Rollmania">
+			<Title titulo="|~Rollmania~|"/>
+				<main className="App">
+					<Dice cantidad="3" roll={roll}/>
+				</main>
+				<RollButton roll_func={roll_dice}/>
 		</div>
 	);
 }

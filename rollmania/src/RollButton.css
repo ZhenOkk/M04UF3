@@ -1,0 +1,10 @@
+.RollButton {
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	text-align: center;
+	width: 80px;
+	height: 40px;
+	background-color: #4289f0;
+	color: #000000;
+}
